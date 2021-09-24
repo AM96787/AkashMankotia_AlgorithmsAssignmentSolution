@@ -12,6 +12,8 @@ public class CompanyStocks {
 	Scanner sc = new Scanner(System.in);
 	public double arr[];
 
+	// This function is to get the user input
+	// for stock price and companies stock price status
 	public void getInputs() {
 		HashMap<Integer, Double> pricemap = new HashMap<>();
 		HashMap<Integer, String> statusmap = new HashMap<>();
@@ -19,7 +21,7 @@ public class CompanyStocks {
 		noOfCompanies = sc.nextInt();
 		System.out.print("\n");
 		for (int i = 1; i <= noOfCompanies; i++) {
-			System.out.print("Enter the share price for companies " + i + ": ");
+			System.out.print("Enter the stock price for companies " + i + ": ");
 			sharePrice = sc.nextDouble();
 			System.out.print("\n");
 			System.out.print("Whether company's stock price rose today compare to yesterday?: ");
@@ -45,6 +47,8 @@ public class CompanyStocks {
 		}
 	}
 
+	// This function is to display the user input menu
+	// and take input choice from users
 	public int displayMenuToGetChoice() {
 		System.out.println("---------------------------------------------------------------------------");
 		System.out.println("1. Display the companies stock prices in ascending order");
@@ -103,7 +107,7 @@ public class CompanyStocks {
 				System.out.print("Enter the Stock Price for searching: ");
 				double sp = cs.sc.nextDouble();
 				System.out.print("\n");
-				int s = bs.searchFunction(cs.arr,0,(cs.arr.length - 1), sp);
+				int s = bs.searchFunction(cs.arr, 0, (cs.arr.length - 1), sp);
 				if (s == -1)
 					System.out.println("Stock of value " + sp + " is not available\n");
 				else

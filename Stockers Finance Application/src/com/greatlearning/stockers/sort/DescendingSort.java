@@ -1,5 +1,7 @@
 package com.greatlearning.stockers.sort;
 
+//This Class will be used to sort the
+//array in descending order
 public class DescendingSort {
 
 	void merge(double arr[], int left, int mid, int right) {
@@ -39,6 +41,8 @@ public class DescendingSort {
 		}
 	}
 
+	// This is the function that will be called from
+	// the companyStocks class main method
 	public void mergeSort(double arr[], int left, int right) {
 		if (left < right) {
 			int mid = (left + right) / 2;
@@ -51,4 +55,3 @@ public class DescendingSort {
 	}
 
 }
-
